@@ -215,7 +215,7 @@ nav{
 .f-note{font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:.06em;text-align:center}
 
 /* Right cards */
-.h-right{display:flex;flex-direction:column;gap:0}
+.h-right{display:flex;flex-direction:column;gap:0;padding-top:2rem}
 .hcard{
   padding:1.75rem 1.5rem;
   background:rgba(232,98,26,0.08);
@@ -231,15 +231,15 @@ nav{
 .hcard+.hcard{border-top:none}
 .hcard:first-child{border-radius:4px 4px 0 0}
 .hcard:last-child{border-radius:0 0 4px 4px}
-.hcard-n{font-family:var(--display);font-size:3.5rem;color:rgba(232,98,26,0.15);line-height:1;margin-bottom:.3rem}
+.hcard-n{font-family:var(--display);font-size:3.5rem;color:rgba(232,98,26,0.45);line-height:1;margin-bottom:.3rem}
 .hcard-t{font-family:var(--serif);font-size:.9rem;font-weight:700;color:#fff;margin-bottom:.4rem;line-height:1.3}
-.hcard-b{font-size:12px;color:rgba(240,235,224,0.5);line-height:1.65}
+.hcard-b{font-size:12px;color:rgba(240,235,224,0.75);line-height:1.65}
 
 /* SECTION STYLES */
 .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
 .stag{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--ember);margin-bottom:.75rem}
 .stit{font-family:var(--display);font-size:clamp(2.8rem,6vw,5rem);letter-spacing:.03em;line-height:.92;color:#fff;margin-bottom:1.5rem}
-.sbod{font-family:var(--serif);font-size:1rem;line-height:1.85;color:rgba(240,235,224,0.6)}
+.sbod{font-family:var(--serif);font-size:1rem;line-height:1.85;color:rgba(240,235,224,0.82)}
 
 /* Divider */
 .fdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(232,98,26,0.4),transparent)}
@@ -320,10 +320,10 @@ nav{
   transition:transform .4s ease;
 }
 .tc:hover::after{transform:scaleX(1)}
-.tc-n{font-family:var(--display);font-size:5.5rem;color:rgba(232,98,26,0.1);line-height:1;margin-bottom:.75rem;letter-spacing:.04em;transition:color .3s}
-.tc:hover .tc-n{color:rgba(232,98,26,0.2)}
+.tc-n{font-family:var(--display);font-size:5.5rem;color:rgba(232,98,26,0.4);line-height:1;margin-bottom:.75rem;letter-spacing:.04em;transition:color .3s}
+.tc:hover .tc-n{color:rgba(232,98,26,0.65)}
 .tc-t{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.75rem;line-height:1.3}
-.tc-b{font-size:13px;color:rgba(240,235,224,0.5);line-height:1.8}
+.tc-b{font-size:13px;color:rgba(240,235,224,0.75);line-height:1.8}
 
 /* READING */
 .rs{
@@ -376,14 +376,14 @@ nav{
 .prule{width:24px;height:1px;background:var(--fire);margin-bottom:1rem}
 .ptit{font-family:var(--serif);font-size:1rem;font-weight:700;color:#fff;line-height:1.4;margin-bottom:.75rem}
 .ptit.big{font-size:1.4rem}
-.pexc{font-size:13px;color:rgba(240,235,224,0.45);line-height:1.75;margin-bottom:1.25rem}
+.pexc{font-size:13px;color:rgba(240,235,224,0.72);line-height:1.75;margin-bottom:1.25rem}
 .plnk{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);display:inline-flex;gap:4px;transition:gap .2s}
 .plnk:hover{gap:8px;color:var(--fire)}
 
 /* CTA */
 .cta-section{
   background:#0D0B08;
-  padding:9rem 1.5rem;
+  padding:5rem 1.5rem;
   position:relative;overflow:hidden;
   text-align:center;
 }
@@ -634,7 +634,7 @@ footer{background:#080706;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(2
       <div class="ac fade-up">
         <div class="stag">About Steve</div>
         <h2 class="stit" style="font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:2rem">NORTH VANCOUVER.<br>STILL STANDING.</h2>
-        <p class="sbod">I co-founded Tallbridge Real Estate in 2015. Built it to 65 people operating across Texas and Georgia. I've been through a partner exit, a financial collapse, years of quiet pressure — and I kept paying my team through all of it.</p>
+        <p class="sbod">I built a real estate company to 65 people. Went through a partner exit, a financial collapse, years of quiet pressure — and kept paying my team through all of it.</p>
         <div class="pq">"I kept paying my team. I don't know how, but I did. That part still matters to me."</div>
         <p class="sbod">I'm not writing this from the other side. I'm writing it from inside the build. I see solutions to problems other people can't yet see. That's what this is about.</p>
         <br>
@@ -670,11 +670,11 @@ footer{background:#080706;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(2
         <a href="blog/post-2.html" class="plnk">Read →</a>
       </div>
       <div class="pc fade-up">
-        <span class="pcat">The Fire</span>
-        <span class="pdate">April 27, 2026</span>
-        <h3 class="ptit">The Hidden Operating System Running Successful People Into the Ground</h3>
-        <p class="pexc">Most high achievers aren't building companies or careers. They're building evidence of their own worth.</p>
-        <a href="blog/2026-04-27-the-hidden-operating-system-running-successful-people-into-t.html" class="plnk">Read →</a>
+        <span class="pcat">Joy</span>
+        <span class="pdate">April 17, 2026</span>
+        <h3 class="ptit">The 20 minutes that changed how I wake up</h3>
+        <p class="pexc">Not a morning routine. A morning reckoning. The difference matters more than you'd think.</p>
+        <a href="blog/post-3.html" class="plnk">Read →</a>
       </div>
     </div>
   </div>
