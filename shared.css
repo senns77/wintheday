@@ -1,0 +1,55 @@
+/* SHARED STYLES — Win The Day */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#0D0B08}
+body{font-family:'DM Sans',sans-serif;background-color:#0D0B08!important;color:#F0EBE0;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+:root{
+  --fire:#E8621A;--ember:#C9872A;--gold:#D4A843;
+  --warm:#F0EBE0;--ash:#9A9080;--coal:#111008;
+  --max:1100px;
+  --serif:'Libre Baskerville',Georgia,serif;
+  --display:'Bebas Neue',sans-serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#0D0B08}
+::-webkit-scrollbar-thumb{background:var(--ember)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 1.5rem;background:#0D0B08;border-bottom:1px solid rgba(232,98,26,0.3)}
+.nw{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+.nl{font-family:var(--display);font-size:22px;letter-spacing:.1em;color:#fff}
+.nl span{color:var(--fire)}
+.nr{display:flex;align-items:center;gap:1.5rem}
+.nr a{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);transition:color .2s}
+.nr a:hover,.nr a.active{color:#fff}
+.nc{background:var(--fire)!important;color:#fff!important;padding:10px 22px;border-radius:3px;font-weight:700!important;letter-spacing:.08em!important}
+.nc:hover{background:#ff6b1a!important}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.stag{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--ember);margin-bottom:.75rem}
+.stit{font-family:var(--display);font-size:clamp(2.8rem,6vw,5rem);letter-spacing:.03em;line-height:.92;color:#fff;margin-bottom:1.5rem}
+.sbod{font-family:var(--serif);font-size:1rem;line-height:1.85;color:rgba(240,235,224,0.62)}
+.fdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(232,98,26,0.4),transparent)}
+.btn-fire{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--fire);color:#fff;font-size:13px;font-weight:700;padding:16px 28px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:all .25s;box-shadow:0 4px 20px rgba(232,98,26,0.4)}
+.btn-fire:hover{background:#ff6b1a;box-shadow:0 6px 30px rgba(232,98,26,0.6);transform:translateY(-2px)}
+.btn-out{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);border:1px solid rgba(232,98,26,0.4);padding:13px 26px;border-radius:3px;transition:all .2s}
+.btn-out:hover{border-color:var(--fire);background:rgba(232,98,26,0.08);color:#fff}
+.pq{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:#fff;border-left:3px solid var(--fire);padding:1.25rem 1.5rem;background:rgba(232,98,26,0.08);margin:2rem 0;line-height:1.6}
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.fade-in{opacity:0;transition:opacity .9s ease}
+.fade-in.in{opacity:1}
+footer{background:#080706;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(232,98,26,0.1)}
+.fw{max-width:var(--max);margin:0 auto}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+.flo{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em;color:#fff;margin-bottom:.75rem}
+.flo span{color:var(--fire)}
+.ftag{font-family:var(--serif);font-style:italic;font-size:.875rem;color:rgba(240,235,224,0.22);line-height:1.7}
+.fch{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(240,235,224,0.18);margin-bottom:1.25rem}
+.fcl a{display:block;font-size:13px;color:rgba(240,235,224,0.3);margin-bottom:.65rem;transition:color .2s}
+.fcl a:hover{color:#fff}
+.fb{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:11px;color:rgba(240,235,224,0.15);letter-spacing:.06em}
+.fbl{display:flex;gap:1.5rem}
+.fbl a{color:rgba(240,235,224,0.15);transition:color .2s}
+.fbl a:hover{color:rgba(240,235,224,0.4)}
+@media(max-width:600px){.nr a:not(.nc){display:none}.ft{grid-template-columns:1fr}}
+@media(max-width:900px){.ft{grid-template-columns:1fr 1fr}}

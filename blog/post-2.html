@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your identity is the only asset that can't be taken — Win The Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#0D0B08}
+body{font-family:'DM Sans',sans-serif;background-color:#0D0B08!important;color:#F0EBE0;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{text-decoration:none;color:inherit}
+:root{--fire:#E8621A;--ember:#C9872A;--gold:#D4A843;--warm:#F0EBE0;--ash:#9A9080;--max:720px;--serif:'Libre Baskerville',Georgia,serif;--display:'Bebas Neue',sans-serif;--sans:'DM Sans',system-ui,sans-serif}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#0D0B08}::-webkit-scrollbar-thumb{background:var(--ember)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 1.5rem;background:#0D0B08;border-bottom:1px solid rgba(232,98,26,0.3)}
+.nw{max-width:1100px;margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+.nl{font-family:var(--display);font-size:22px;letter-spacing:.1em;color:#fff}.nl span{color:var(--fire)}
+.nr{display:flex;align-items:center;gap:1.5rem}
+.nr a{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);transition:color .2s}.nr a:hover{color:#fff}
+.nc{background:var(--fire)!important;color:#fff!important;padding:10px 22px;border-radius:3px;font-weight:700!important}.nc:hover{background:#ff6b1a!important}
+.fdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(232,98,26,0.4),transparent)}
+.btn-fire{display:inline-flex;align-items:center;justify-content:center;background:var(--fire);color:#fff;font-size:13px;font-weight:700;padding:16px 28px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:all .25s;box-shadow:0 4px 20px rgba(232,98,26,0.4)}
+.btn-fire:hover{background:#ff6b1a;transform:translateY(-1px)}
+footer{background:#080706;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(232,98,26,0.1)}
+.fw{max-width:1100px;margin:0 auto}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+.flo{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em;color:#fff;margin-bottom:.75rem}.flo span{color:var(--fire)}
+.ftag{font-family:var(--serif);font-style:italic;font-size:.875rem;color:rgba(240,235,224,0.22);line-height:1.7}
+.fch{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(240,235,224,0.18);margin-bottom:1.25rem}
+.fcl a{display:block;font-size:13px;color:rgba(240,235,224,0.3);margin-bottom:.65rem;transition:color .2s}.fcl a:hover{color:#fff}
+.fb{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:11px;color:rgba(240,235,224,0.15);letter-spacing:.06em}
+.fbl{display:flex;gap:1.5rem}.fbl a{color:rgba(240,235,224,0.15);transition:color .2s}.fbl a:hover{color:rgba(240,235,224,0.4)}
+.post-header{padding-top:58px;background:#0D0B08;position:relative;overflow:hidden}
+.ph-glow{position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(232,98,26,0.12) 0%,transparent 70%);pointer-events:none}
+.ph-inner{max-width:var(--max);margin:0 auto;padding:5rem 1.5rem 3rem}
+.post-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.post-cat{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--fire);background:rgba(232,98,26,0.12);padding:5px 12px;border-radius:2px}
+.post-date{font-size:11px;color:rgba(240,235,224,0.3)}
+.post-title{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.5rem);letter-spacing:.02em;line-height:.92;color:#fff;margin-bottom:1.5rem}
+.post-intro{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:rgba(240,235,224,0.65);line-height:1.8;border-left:3px solid var(--fire);padding-left:1.5rem;margin-top:2rem}
+.post-body{max-width:var(--max);margin:0 auto;padding:4rem 1.5rem 6rem}
+.post-body p{font-family:var(--serif);font-size:1.05rem;line-height:1.9;color:rgba(240,235,224,0.72);margin-bottom:1.75rem}
+.post-body h2{font-family:var(--display);font-size:2rem;letter-spacing:.04em;color:#fff;margin:3rem 0 1.25rem;line-height:1}
+.post-body blockquote{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:#fff;border-left:3px solid var(--fire);padding:1.25rem 1.5rem;background:rgba(232,98,26,0.08);margin:2rem 0;line-height:1.6}
+.post-body strong{color:#fff;font-weight:700}
+.post-rule{width:40px;height:2px;background:var(--fire);margin:3rem 0}
+.post-cta{background:#111008;border:1px solid rgba(232,98,26,0.2);border-radius:4px;padding:2.5rem;margin-top:4rem;position:relative;overflow:hidden;text-align:center}
+.post-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--fire),var(--ember))}
+.post-cta h3{font-family:var(--display);font-size:2rem;letter-spacing:.04em;color:#fff;margin-bottom:.75rem}
+.post-cta p{font-family:var(--serif);font-style:italic;font-size:.95rem;color:rgba(240,235,224,0.5);line-height:1.7;margin-bottom:1.5rem}
+.post-nav{max-width:var(--max);margin:0 auto;padding:0 1.5rem 4rem;display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap}
+.pnav-item{flex:1;min-width:200px;background:#111008;border:1px solid rgba(255,255,255,0.05);border-radius:4px;padding:1.5rem;transition:border-color .2s}
+.pnav-item:hover{border-color:rgba(232,98,26,0.2)}
+.pnav-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,235,224,0.25);margin-bottom:.5rem}
+.pnav-title{font-family:var(--serif);font-size:.9rem;font-weight:700;color:rgba(240,235,224,0.7);line-height:1.4}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);transition:color .2s;margin-bottom:2rem}
+.back-link:hover{color:#fff}
+@media(max-width:900px){.ft{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.nr a:not(.nc){display:none}.ft{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nw">
+    <a href="../index.html" class="nl">WIN <span>THE</span> DAY</a>
+    <div class="nr"><a href="../about.html">About</a><a href="../blog.html">Dispatch</a><a href="../newsletter.html" class="nc">Subscribe Free</a></div>
+  </div>
+</nav>
+<article>
+  <div class="post-header">
+    <div class="ph-glow"></div>
+    <div class="ph-inner">
+      <a href="../blog.html" class="back-link">← Back to dispatch</a>
+      <div class="post-meta"><span class="post-cat">Identity</span><span class="post-date">April 19, 2026</span></div>
+      <h1 class="post-title">YOUR IDENTITY IS THE ONLY ASSET THAT CAN'T BE TAKEN</h1>
+      <p class="post-intro">The job can disappear. The title disappears. The revenue, the savings, the company — all of it is temporary. One thing isn't. And if you don't know what that one thing is, this is the most important thing you'll read today.</p>
+    </div>
+  </div>
+  <div class="fdiv"></div>
+  <div class="post-body">
+    <p>Oracle just cut 30,000 people. The headlines treat it like a business story. It's not. It's an identity story — for every single person who woke up that morning with a title and went to bed without one.</p>
+    <p>I know what that moment feels like. Not from a layoff, but from something that took longer and felt more personal — watching a company I'd built start to come apart while I was still inside it. The slow version is actually harder in some ways. You can't point to a single day and say "that was it." It's a gradual erosion of everything you thought you were.</p>
+    <p>And here's what that reveals: most of us have built our identity on things that can be taken.</p>
+    <div class="post-rule"></div>
+    <h2>WHAT MOST PEOPLE BUILD ON</h2>
+    <p>The job title. The company name. The revenue number. The team size. The lifestyle that comes with the income. These are all real — and they're all contingent. They exist because of external conditions that you do not fully control.</p>
+    <p>When those conditions change — and they always eventually change — the person who built their identity on them doesn't just lose a job. They lose themselves. That's what the headlines miss. The layoff statistic is 30,000 people. The actual story is 30,000 people asking the same question at the same time: <strong>who am I if I'm not this?</strong></p>
+    <blockquote>The person who built the job, the company, the revenue — that person doesn't disappear when those things do. They just get harder to see.</blockquote>
+    <p>That's the thing nobody tells you. The identity that was doing the building in the first place — the curiosity, the drive, the specific way you see problems and solutions — that's not attached to any title. It can't be laid off. It can't be taken in a market correction. It's yours in a way that nothing external ever fully is.</p>
+    <div class="post-rule"></div>
+    <h2>HOW TO BUILD FROM WHAT CAN'T BE TAKEN</h2>
+    <p>This isn't abstract. Here's the practical move: write down three problems you've solved in the last five years that nobody else in the room could have solved the same way. Not better necessarily — just differently. In your specific way.</p>
+    <p>That's the thing. That specific way of seeing. That's the asset that survives everything.</p>
+    <p>When I was in the hardest part of rebuilding Tallbridge, I couldn't lean on revenue or team size or market position. None of those were strong enough to hold weight. What I could lean on was a specific thing I've always been able to do: <strong>I see solutions to problems other people can't yet see.</strong></p>
+    <p>That didn't come from the company. The company came from that. And when the company got hard, that thing was still there. It always was. The fire just made it visible.</p>
+    <p>You have a version of this. The work right now — regardless of what's happening externally — is to find it and name it before circumstances force you to.</p>
+    <p>Because they will. Eventually, they always do.</p>
+    <div class="post-cta">
+      <h3>THE DISPATCH</h3>
+      <p>Three times a week — for the person building from what can't be taken.</p>
+      <a href="../newsletter.html" class="btn-fire">Subscribe free →</a>
+    </div>
+  </div>
+</article>
+<div class="post-nav">
+  <a href="post-1.html" class="pnav-item"><div class="pnav-label">← Previous</div><div class="pnav-title">The day I almost let the fire win</div></a>
+  <a href="post-3.html" class="pnav-item" style="text-align:right"><div class="pnav-label">Next →</div><div class="pnav-title">The 20 minutes that changed how I wake up</div></a>
+</div>
+<div class="fdiv"></div>
+<footer>
+  <div class="fw">
+    <div class="ft">
+      <div><div class="flo">WIN <span>THE</span> DAY</div><p class="ftag">Built from the middle of the fire.<br>North Vancouver, BC — Steve Enns</p></div>
+      <div><div class="fch">Navigate</div><div class="fcl"><a href="../about.html">About Steve</a><a href="../blog.html">The Dispatch</a><a href="../newsletter.html">Subscribe</a><a href="../start.html">Start Here</a></div></div>
+      <div><div class="fch">Work with me</div><div class="fcl"><a href="../newsletter.html">Newsletter — $19/mo</a><a href="../start.html">Starter Kit — $97</a><a href="../newsletter.html">90-Day Accelerator</a><a href="../newsletter.html">Already Done — 2026</a></div></div>
+    </div>
+    <div class="fb"><span>© 2026 Steve Enns — Win The Day · wintheday.me</span><div class="fbl"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div></div>
+  </div>
+</footer>
+<script>document.documentElement.style.backgroundColor='#0D0B08';document.body.style.backgroundColor='#0D0B08';</script>
+</body>
+</html>

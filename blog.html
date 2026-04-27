@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dispatch — Win The Day</title>
+<meta name="description" content="Three times a week. One thing that matters. From inside the fire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#0D0B08}
+body{font-family:'DM Sans',sans-serif;background-color:#0D0B08!important;color:#F0EBE0;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{text-decoration:none;color:inherit}
+:root{--fire:#E8621A;--ember:#C9872A;--gold:#D4A843;--warm:#F0EBE0;--ash:#9A9080;--coal:#111008;--max:1100px;--serif:'Libre Baskerville',Georgia,serif;--display:'Bebas Neue',sans-serif;--sans:'DM Sans',system-ui,sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 1.5rem;background:#0D0B08;border-bottom:1px solid rgba(232,98,26,0.3)}
+.nw{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+.nl{font-family:var(--display);font-size:22px;letter-spacing:.1em;color:#fff}
+.nl span{color:var(--fire)}
+.nr{display:flex;align-items:center;gap:1.5rem}
+.nr a{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);transition:color .2s}
+.nr a:hover{color:#fff}
+.nc{background:var(--fire)!important;color:#fff!important;padding:10px 22px;border-radius:3px;font-weight:700!important}
+.nc:hover{background:#ff6b1a!important}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.stag{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--ember);margin-bottom:.75rem}
+.stit{font-family:var(--display);font-size:clamp(2.8rem,6vw,5rem);letter-spacing:.03em;line-height:.92;color:#fff;margin-bottom:1.5rem}
+.fdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(232,98,26,0.4),transparent)}
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.fade-in{opacity:0;transition:opacity .9s ease}
+.fade-in.in{opacity:1}
+
+/* PAGE HERO */
+.ph{background:#0D0B08;padding:9rem 1.5rem 5rem;position:relative;overflow:hidden;border-bottom:1px solid rgba(232,98,26,0.15)}
+.ph-glow{position:absolute;bottom:-150px;right:-100px;width:600px;height:400px;background:radial-gradient(ellipse,rgba(232,98,26,0.12) 0%,transparent 70%);pointer-events:none}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(232,98,26,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(232,98,26,0.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
+.ph-inner{max-width:var(--max);margin:0 auto;padding:0 1.5rem;position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+.ph h1{font-family:var(--display);font-size:clamp(3.5rem,8vw,7rem);line-height:.88;letter-spacing:.02em;color:#fff}
+.ph h1 em{font-style:normal;color:var(--fire)}
+.ph-right{text-align:right}
+.ph-right p{font-family:var(--serif);font-style:italic;color:rgba(240,235,224,0.5);line-height:1.7;font-size:.95rem;max-width:280px;margin-left:auto}
+
+/* FEATURED POST */
+.feat{background:#0D0B08;padding:5rem 1.5rem 0}
+.feat-card{background:#111008;border:1px solid rgba(232,98,26,0.15);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--fire),var(--ember))}
+.feat-content{padding:3.5rem}
+.feat-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);margin-bottom:1rem;display:block}
+.feat-date{font-size:11px;color:rgba(240,235,224,0.3);margin-bottom:1.5rem;display:block}
+.feat-rule{width:32px;height:2px;background:var(--fire);margin-bottom:1.5rem}
+.feat-title{font-family:var(--serif);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:#fff;line-height:1.3;margin-bottom:1rem}
+.feat-exc{font-family:var(--serif);font-size:1rem;color:rgba(240,235,224,0.55);line-height:1.8;margin-bottom:2rem;font-style:italic}
+.feat-link{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);display:inline-flex;gap:4px;transition:gap .2s;border-bottom:1px solid rgba(201,135,42,0.3);padding-bottom:2px}
+.feat-link:hover{gap:10px;color:var(--fire);border-color:var(--fire)}
+.feat-art{background:#1a1710;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.feat-art-svg{width:100%;height:100%;min-height:320px}
+
+/* POSTS GRID */
+.posts-section{background:#0D0B08;padding:3rem 1.5rem 6rem}
+.posts-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(232,98,26,0.08);border:1px solid rgba(232,98,26,0.08);border-radius:4px;overflow:hidden}
+.post-card{background:#111008;padding:2.25rem 2rem;transition:background .2s;position:relative}
+.post-card:hover{background:#161310}
+.post-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(232,98,26,0.08)}
+.post-cat{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);margin-bottom:.6rem;display:block}
+.post-date{font-size:11px;color:rgba(240,235,224,0.3);margin-bottom:.875rem;display:block}
+.post-rule{width:20px;height:1px;background:var(--fire);margin-bottom:.875rem}
+.post-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:#fff;line-height:1.4;margin-bottom:.6rem}
+.post-exc{font-size:12px;color:rgba(240,235,224,0.4);line-height:1.7;margin-bottom:1rem}
+.post-link{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);display:inline-flex;gap:4px;transition:gap .2s}
+.post-link:hover{gap:8px;color:var(--fire)}
+
+/* CATEGORIES */
+.cats{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.cat-btn{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:20px;border:1px solid rgba(232,98,26,0.2);color:var(--ash);cursor:pointer;transition:all .2s;background:none;font-family:var(--sans)}
+.cat-btn:hover,.cat-btn.active{border-color:var(--fire);color:var(--fire);background:rgba(232,98,26,0.06)}
+
+/* CTA */
+.cta-strip{background:#111008;padding:5rem 1.5rem;border-top:1px solid rgba(232,98,26,0.15);text-align:center;position:relative;overflow:hidden}
+.cs-glow{position:absolute;bottom:-150px;left:50%;transform:translateX(-50%);width:600px;height:350px;background:radial-gradient(ellipse,rgba(232,98,26,0.15) 0%,transparent 70%);pointer-events:none}
+.btn-fire{display:inline-flex;align-items:center;gap:8px;background:var(--fire);color:#fff;font-size:12px;font-weight:700;padding:15px 28px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;transition:all .25s;border:none;cursor:pointer;font-family:var(--sans);box-shadow:0 4px 20px rgba(232,98,26,0.35)}
+.btn-fire:hover{background:#ff6b1a;box-shadow:0 6px 30px rgba(232,98,26,0.5);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#080706;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(232,98,26,0.1)}
+.fw{max-width:var(--max);margin:0 auto}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+.flo{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em;color:#fff;margin-bottom:.75rem}
+.flo span{color:var(--fire)}
+.ftag{font-family:var(--serif);font-style:italic;font-size:.875rem;color:rgba(240,235,224,0.22);line-height:1.7}
+.fch{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(240,235,224,0.18);margin-bottom:1.25rem}
+.fcl a{display:block;font-size:13px;color:rgba(240,235,224,0.3);margin-bottom:.65rem;transition:color .2s}
+.fcl a:hover{color:#fff}
+.fb{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:11px;color:rgba(240,235,224,0.15);letter-spacing:.06em}
+.fbl{display:flex;gap:1.5rem}
+.fbl a{color:rgba(240,235,224,0.15);transition:color .2s}
+.fbl a:hover{color:rgba(240,235,224,0.4)}
+
+@media(max-width:900px){.feat-card{grid-template-columns:1fr}.feat-art{display:none}.posts-grid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.nr a:not(.nc){display:none}.posts-grid{grid-template-columns:1fr}.ft{grid-template-columns:1fr}.ph-inner{flex-direction:column}.ph-right{text-align:left}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nw">
+    <a href="index.html" class="nl">WIN <span>THE</span> DAY</a>
+    <div class="nr">
+      <a href="about.html">About</a>
+      <a href="blog.html">Dispatch</a>
+      <a href="newsletter.html" class="nc">Subscribe Free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="ph">
+  <div class="ph-glow"></div>
+  <div class="ph-grid"></div>
+  <div class="ph-inner">
+    <div>
+      <div class="stag">The dispatch</div>
+      <h1>FROM<br>THE <em>FIELD.</em></h1>
+    </div>
+    <div class="ph-right">
+      <p>Three times a week — Tuesday, Thursday, Saturday. One thing that matters. From inside the fire.</p>
+    </div>
+  </div>
+</section>
+
+<section class="feat">
+  <div class="wrap">
+    <div class="feat-card fade-in">
+      <div class="feat-content">
+        <span class="feat-tag">🔥 Featured</span>
+        <span class="feat-date">April 22, 2026</span>
+        <div class="feat-rule"></div>
+        <h2 class="feat-title">The day I almost let the fire win — and why I didn't</h2>
+        <p class="feat-exc">There was a point where walking away would have been the easier call. Every rational voice said to cut the losses. The numbers said quit. The pressure said quit. Here's what happened when I didn't — and what it cost, and what it built.</p>
+        <a href="blog/post-1.html" class="feat-link">Read the dispatch →</a>
+      </div>
+      <div class="feat-art">
+        <svg class="feat-art-svg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="320" fill="#1a1710"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="rgba(232,98,26,0.06)" stroke-width="1"/>
+          <line x1="0" y1="160" x2="400" y2="160" stroke="rgba(232,98,26,0.06)" stroke-width="1"/>
+          <line x1="0" y1="240" x2="400" y2="240" stroke="rgba(232,98,26,0.06)" stroke-width="1"/>
+          <line x1="100" y1="0" x2="100" y2="320" stroke="rgba(232,98,26,0.06)" stroke-width="1"/>
+          <line x1="200" y1="0" x2="200" y2="320" stroke="rgba(232,98,26,0.06)" stroke-width="1"/>
+          <line x1="300" y1="0" x2="300" y2="320" stroke="rgba(232,98,26,0.06)" stroke-width="1"/>
+          <path d="M200 310C155 275 110 235 125 185C140 135 165 150 172 115C179 80 158 55 200 25C200 25 186 68 206 95C226 122 244 109 236 155C228 201 255 183 266 225C277 267 248 293 200 310Z" fill="url(#bfg1)" opacity="0.7"/>
+          <path d="M200 310C172 278 148 244 160 204C172 164 186 170 189 143C192 116 176 100 200 72C200 72 193 99 205 116C217 133 225 122 222 152C219 182 236 170 241 204C246 238 226 276 200 310Z" fill="url(#bfg2)" opacity="0.85"/>
+          <path d="M200 310C188 290 180 268 186 250C192 232 198 236 200 222C202 208 195 198 200 184C200 184 197 198 204 208C211 218 213 212 212 228C211 244 217 238 219 256C221 274 212 294 200 310Z" fill="url(#bfg3)"/>
+          <defs>
+            <linearGradient id="bfg1" x1="200" y1="25" x2="200" y2="310" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#E8621A"/><stop offset="100%" stop-color="#C9872A" stop-opacity="0.3"/></linearGradient>
+            <linearGradient id="bfg2" x1="200" y1="72" x2="200" y2="310" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#FFA040"/><stop offset="100%" stop-color="#E8621A" stop-opacity="0.5"/></linearGradient>
+            <linearGradient id="bfg3" x1="200" y1="184" x2="200" y2="310" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#fff" stop-opacity="0.9"/><stop offset="100%" stop-color="#D4A843" stop-opacity="0.6"/></linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="posts-section">
+  <div class="wrap">
+    <div class="posts-header">
+      <div class="cats">
+        <button class="cat-btn active">All</button>
+        <button class="cat-btn">Mindset</button>
+        <button class="cat-btn">Identity</button>
+        <button class="cat-btn">Joy</button>
+        <button class="cat-btn">Systems</button>
+        <button class="cat-btn">Wealth</button>
+      </div>
+    </div>
+    <div class="posts-grid">
+      <div class="post-card fade-up">
+        <span class="post-cat">Identity</span>
+        <span class="post-date">April 19, 2026</span>
+        <div class="post-rule"></div>
+        <h3 class="post-title">Your identity is the only asset that can't be taken</h3>
+        <p class="post-exc">The job, the title, the income can disappear. One thing can't. Here's how to build from it.</p>
+        <a href="blog/post-2.html" class="post-link">Read →</a>
+      </div>
+      <div class="post-card fade-up">
+        <span class="post-cat">Joy</span>
+        <span class="post-date">April 17, 2026</span>
+        <div class="post-rule"></div>
+        <h3 class="post-title">The 20 minutes that changed how I wake up</h3>
+        <p class="post-exc">Not a morning routine. A morning reckoning. The difference matters more than you'd think.</p>
+        <a href="blog/post-3.html" class="post-link">Read →</a>
+      </div>
+      <div class="post-card fade-up">
+        <span class="post-cat">Wealth</span>
+        <span class="post-date">April 15, 2026</span>
+        <div class="post-rule"></div>
+        <h3 class="post-title">Wealth follows joy. It does not precede it.</h3>
+        <p class="post-exc">Everyone says grind now, enjoy later. That's backwards. Here's why — and what to do instead.</p>
+        <a href="blog/post-4.html" class="post-link">Read →</a>
+      </div>
+      <div class="post-card fade-up">
+        <span class="post-cat">Systems</span>
+        <span class="post-date">April 12, 2026</span>
+        <div class="post-rule"></div>
+        <h3 class="post-title">The one decision that changes how every other decision feels</h3>
+        <p class="post-exc">It's not a strategy. It's not a habit. It's a stance you take every morning before anything else happens.</p>
+        <a href="blog/post-5.html" class="post-link">Read →</a>
+      </div>
+      <div class="post-card fade-up">
+        <span class="post-cat">Mindset</span>
+        <span class="post-date">April 10, 2026</span>
+        <div class="post-rule"></div>
+        <h3 class="post-title">Starving your joy to feed a fear that was never yours to keep</h3>
+        <p class="post-exc">Where did the fear come from? Whose voice is that? And what happens when you stop feeding it?</p>
+        <a href="blog/post-6.html" class="post-link">Read →</a>
+      </div>
+      <div class="post-card fade-up">
+        <span class="post-cat">Identity</span>
+        <span class="post-date">April 8, 2026</span>
+        <div class="post-rule"></div>
+        <h3 class="post-title">The version of you that makes it through already exists</h3>
+        <p class="post-exc">Already Done isn't wishful thinking. It's a different way of understanding how identity and change actually work.</p>
+        <a href="blog/post-7.html" class="post-link">Read →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fdiv"></div>
+
+<section class="cta-strip">
+  <div class="cs-glow"></div>
+  <div style="position:relative;z-index:2">
+    <div class="stag">Never miss an issue</div>
+    <h2 class="stit">GET IT IN<br>YOUR INBOX.</h2>
+    <p style="font-family:var(--serif);font-style:italic;color:rgba(240,235,224,0.5);max-width:400px;margin:0 auto 2rem;line-height:1.75">Three times a week. Free to read. No algorithm deciding if you see it.</p>
+    <a href="newsletter.html" class="btn-fire">Subscribe free →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fw">
+    <div class="ft">
+      <div><div class="flo">WIN <span>THE</span> DAY</div><p class="ftag">Built from the middle of the fire.<br>North Vancouver, BC — Steve Enns</p></div>
+      <div><div class="fch">Navigate</div><div class="fcl"><a href="about.html">About Steve</a><a href="blog.html">The Dispatch</a><a href="newsletter.html">Subscribe</a><a href="start.html">Start Here</a></div></div>
+      <div><div class="fch">Work with me</div><div class="fcl"><a href="newsletter.html">Newsletter — $19/mo</a><a href="start.html">Starter Kit — $97</a><a href="newsletter.html">90-Day Accelerator</a><a href="newsletter.html">Already Done — 2026</a></div></div>
+    </div>
+    <div class="fb"><span>© 2026 Steve Enns — Win The Day · wintheday.me</span><div class="fbl"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+  </div>
+</footer>
+<script>
+document.documentElement.style.backgroundColor='#0D0B08';
+document.body.style.backgroundColor='#0D0B08';
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);obs.unobserve(e.target)}})},{threshold:0.08});
+document.querySelectorAll('.fade-up,.fade-in').forEach(el=>obs.observe(el));
+document.querySelectorAll('.cat-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active')})});
+</script>
+</body>
+</html>

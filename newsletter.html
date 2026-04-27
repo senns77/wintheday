@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe — Win The Day</title>
+<meta name="description" content="Three times a week. One thing that matters. Free to read, free to join.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#0D0B08}
+body{font-family:'DM Sans',sans-serif;background-color:#0D0B08!important;color:#F0EBE0;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{text-decoration:none;color:inherit}
+:root{--fire:#E8621A;--ember:#C9872A;--gold:#D4A843;--warm:#F0EBE0;--ash:#9A9080;--coal:#111008;--max:1100px;--serif:'Libre Baskerville',Georgia,serif;--display:'Bebas Neue',sans-serif;--sans:'DM Sans',system-ui,sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 1.5rem;background:#0D0B08;border-bottom:1px solid rgba(232,98,26,0.3)}
+.nw{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+.nl{font-family:var(--display);font-size:22px;letter-spacing:.1em;color:#fff}
+.nl span{color:var(--fire)}
+.nr{display:flex;align-items:center;gap:1.5rem}
+.nr a{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);transition:color .2s}
+.nr a:hover{color:#fff}
+.nc{background:var(--fire)!important;color:#fff!important;padding:10px 22px;border-radius:3px;font-weight:700!important}
+.nc:hover{background:#ff6b1a!important}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.stag{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--ember);margin-bottom:.75rem}
+.stit{font-family:var(--display);font-size:clamp(2.8rem,6vw,5rem);letter-spacing:.03em;line-height:.92;color:#fff;margin-bottom:1.5rem}
+.sbod{font-family:var(--serif);font-size:1rem;line-height:1.85;color:rgba(240,235,224,0.62);margin-bottom:1.25rem}
+.fdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(232,98,26,0.4),transparent)}
+.btn-fire{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--fire);color:#fff;font-size:13px;font-weight:700;padding:16px 32px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;transition:all .25s;border:none;cursor:pointer;font-family:var(--sans);box-shadow:0 4px 20px rgba(232,98,26,0.35);width:100%}
+.btn-fire:hover{background:#ff6b1a;box-shadow:0 6px 30px rgba(232,98,26,0.5);transform:translateY(-2px)}
+.btn-out{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(240,235,224,0.6);border:1px solid rgba(240,235,224,0.15);padding:16px 32px;border-radius:3px;transition:all .2s;width:100%}
+.btn-out:hover{border-color:rgba(240,235,224,0.4);color:#fff}
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.fade-in{opacity:0;transition:opacity .9s ease}
+.fade-in.in{opacity:1}
+
+/* HERO */
+.ph{background:#0D0B08;padding:10rem 1.5rem 6rem;position:relative;overflow:hidden;text-align:center;border-bottom:1px solid rgba(232,98,26,0.15)}
+.ph-glow{position:absolute;bottom:-150px;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(232,98,26,0.2) 0%,transparent 70%);pointer-events:none}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(232,98,26,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(232,98,26,0.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
+.ph-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.ph h1{font-family:var(--display);font-size:clamp(4rem,10vw,8rem);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:1.5rem;text-shadow:0 0 60px rgba(232,98,26,0.15)}
+.ph h1 em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--fire);filter:drop-shadow(0 0 10px rgba(232,98,26,0.5))}
+.ph-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.6vw,1.2rem);color:rgba(240,235,224,0.6);max-width:520px;margin:0 auto;line-height:1.8}
+
+/* TIERS */
+.tiers{background:#0D0B08;padding:6rem 1.5rem}
+.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(232,98,26,0.1);border:1px solid rgba(232,98,26,0.1);border-radius:4px;overflow:hidden;margin-top:3.5rem}
+.tier{background:#111008;padding:2.5rem 2rem;position:relative;transition:background .3s;display:flex;flex-direction:column}
+.tier:hover{background:#161310}
+.tier.hot{background:rgba(232,98,26,0.08);border:none}
+.tier-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--fire);color:#fff;font-size:9px;font-weight:700;padding:5px 16px;border-radius:0 0 4px 4px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 4px 12px rgba(232,98,26,0.4)}
+.tier::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background .3s}
+.tier.hot::before{background:linear-gradient(90deg,var(--fire),var(--ember))}
+.tier-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);margin-bottom:1rem;display:block}
+.tier-price{font-family:var(--display);font-size:3.5rem;letter-spacing:.02em;color:#fff;line-height:1;margin-bottom:.25rem}
+.tier-price span{font-size:1.2rem;color:var(--ash);font-family:var(--sans);font-weight:400;letter-spacing:0}
+.tier-name{font-size:12px;color:var(--ash);margin-bottom:2rem;font-weight:400}
+.tier-features{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;flex:1}
+.tier-features li{font-size:13px;color:rgba(240,235,224,0.6);padding-left:1.25rem;position:relative;line-height:1.5}
+.tier-features li::before{content:'→';position:absolute;left:0;color:var(--ember);font-size:12px}
+.tier-features li.off{opacity:.3}
+.tier-features li.off::before{content:'—';color:var(--ash)}
+.guarantee{background:#111008;border:1px solid rgba(232,98,26,0.15);border-radius:4px;padding:2.5rem;margin-top:2rem;text-align:center}
+.guarantee h3{font-family:var(--display);font-size:2rem;letter-spacing:.04em;color:#fff;margin-bottom:.75rem}
+.guarantee p{font-family:var(--serif);font-style:italic;color:rgba(240,235,224,0.5);line-height:1.75;font-size:.95rem}
+
+/* WHAT YOU GET */
+.wyg{background:#111008;padding:6rem 1.5rem;border-top:1px solid rgba(255,255,255,0.04)}
+.wyg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(232,98,26,0.08);border:1px solid rgba(232,98,26,0.08);border-radius:4px;overflow:hidden;margin-top:3rem}
+.wc{background:#111008;padding:2.5rem;transition:background .3s;position:relative}
+.wc:hover{background:#161310}
+.wc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--fire),var(--ember));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.wc:hover::after{transform:scaleX(1)}
+.wc-icon{font-size:2rem;margin-bottom:1rem}
+.wc-t{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:.6rem}
+.wc-b{font-size:13px;color:rgba(240,235,224,0.5);line-height:1.75}
+
+/* FOOTER */
+footer{background:#080706;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(232,98,26,0.1)}
+.fw{max-width:var(--max);margin:0 auto}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+.flo{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em;color:#fff;margin-bottom:.75rem}
+.flo span{color:var(--fire)}
+.ftag{font-family:var(--serif);font-style:italic;font-size:.875rem;color:rgba(240,235,224,0.22);line-height:1.7}
+.fch{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(240,235,224,0.18);margin-bottom:1.25rem}
+.fcl a{display:block;font-size:13px;color:rgba(240,235,224,0.3);margin-bottom:.65rem;transition:color .2s}
+.fcl a:hover{color:#fff}
+.fb{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:11px;color:rgba(240,235,224,0.15);letter-spacing:.06em}
+.fbl{display:flex;gap:1.5rem}
+.fbl a{color:rgba(240,235,224,0.15);transition:color .2s}
+.fbl a:hover{color:rgba(240,235,224,0.4)}
+
+@media(max-width:900px){.tiers-grid{grid-template-columns:1fr}.wyg-grid{grid-template-columns:1fr}.ft{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.nr a:not(.nc){display:none}.ft{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nw">
+    <a href="index.html" class="nl">WIN <span>THE</span> DAY</a>
+    <div class="nr">
+      <a href="about.html">About</a>
+      <a href="blog.html">Dispatch</a>
+      <a href="newsletter.html" class="nc">Subscribe Free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="ph">
+  <div class="ph-glow"></div>
+  <div class="ph-grid"></div>
+  <div class="ph-inner">
+    <div class="stag" style="margin-bottom:1.5rem">The dispatch</div>
+    <h1>WALK<br>THROUGH<br>THE <em>FIRE.</em></h1>
+    <p class="ph-sub">Three times a week — one mindset shift, one framework, one action. For the person who is done waiting for things to cool down before they start.</p>
+  </div>
+</section>
+
+<div class="fdiv"></div>
+
+<section class="tiers">
+  <div class="wrap">
+    <div class="stag">Choose your level</div>
+    <h2 class="stit">START WHERE<br>YOU ARE.</h2>
+    <div class="tiers-grid">
+      <div class="tier fade-up">
+        <span class="tier-tag">Free</span>
+        <div class="tier-price">$0</div>
+        <div class="tier-name">Forever free</div>
+        <ul class="tier-features">
+          <li>Full blog access — all posts</li>
+          <li>Dispatch 3x per week</li>
+          <li>Community updates</li>
+          <li class="off">Deep-dive weekly issue</li>
+          <li class="off">Framework breakdowns</li>
+          <li class="off">Early cohort access</li>
+          <li class="off">Book chapters — early access</li>
+        </ul>
+        <form id="freeForm">
+          <div style="display:flex;flex-direction:column;gap:.6rem">
+            <input type="text" placeholder="First name" required style="background:rgba(255,255,255,0.06);border:1px solid rgba(232,98,26,0.2);border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s">
+            <input type="email" placeholder="Email address" required style="background:rgba(255,255,255,0.06);border:1px solid rgba(232,98,26,0.2);border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s">
+            <button type="submit" class="btn-out">Start free →</button>
+          </div>
+        </form>
+      </div>
+      <div class="tier hot fade-up" style="position:relative;padding-top:3.5rem">
+        <div class="tier-badge">Most popular</div>
+        <span class="tier-tag">Paid</span>
+        <div class="tier-price">$19<span>/mo</span></div>
+        <div class="tier-name">Win The Day — full access</div>
+        <ul class="tier-features">
+          <li>Everything in free tier</li>
+          <li>Deep-dive weekly issue</li>
+          <li>Full framework breakdowns</li>
+          <li>Early cohort access</li>
+          <li>Book chapters — early access</li>
+          <li>Direct email access to Steve</li>
+        </ul>
+        <form id="paidForm">
+          <div style="display:flex;flex-direction:column;gap:.6rem">
+            <input type="text" placeholder="First name" required style="background:rgba(255,255,255,0.08);border:1px solid rgba(232,98,26,0.35);border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s">
+            <input type="email" placeholder="Email address" required style="background:rgba(255,255,255,0.08);border:1px solid rgba(232,98,26,0.35);border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s">
+            <button type="submit" class="btn-fire">Get full access →</button>
+          </div>
+        </form>
+      </div>
+      <div class="tier fade-up">
+        <span class="tier-tag">Annual</span>
+        <div class="tier-price">$149<span>/yr</span></div>
+        <div class="tier-name">Save $79 — pay once</div>
+        <ul class="tier-features">
+          <li>Everything in paid tier</li>
+          <li>Save $79 vs monthly</li>
+          <li>Priority cohort placement</li>
+          <li>Starter Kit included — free</li>
+          <li>Quarterly live Q&A with Steve</li>
+        </ul>
+        <form id="annualForm">
+          <div style="display:flex;flex-direction:column;gap:.6rem">
+            <input type="text" placeholder="First name" required style="background:rgba(255,255,255,0.06);border:1px solid rgba(232,98,26,0.2);border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s">
+            <input type="email" placeholder="Email address" required style="background:rgba(255,255,255,0.06);border:1px solid rgba(232,98,26,0.2);border-radius:3px;padding:12px 14px;font-size:13px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s">
+            <button type="submit" class="btn-out">Go annual →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="guarantee fade-up">
+      <h3>The guarantee.</h3>
+      <p>Read 4 paid issues. If it doesn't move you — doesn't change what you think, how you feel, or what you do — I'll refund every dollar. No questions. I'm not interested in keeping your money if this isn't the right fit.</p>
+    </div>
+  </div>
+</section>
+
+<div class="fdiv"></div>
+
+<section class="wyg">
+  <div class="wrap">
+    <div class="stag">What you get</div>
+    <h2 class="stit">EVERY ISSUE<br>DOES ONE THING.</h2>
+    <div class="wyg-grid">
+      <div class="wc fade-up"><div class="wc-icon">🔥</div><div class="wc-t">One mindset shift</div><div class="wc-b">Not motivation. Not hype. A specific way of seeing something that changes how you move through the rest of your week.</div></div>
+      <div class="wc fade-up"><div class="wc-icon">⚡</div><div class="wc-t">One framework</div><div class="wc-b">Something you can actually use. A system, a decision tool, a way of thinking about a problem that I've tested in my own business and life.</div></div>
+      <div class="wc fade-up"><div class="wc-icon">🎯</div><div class="wc-t">One action</div><div class="wc-b">Not a list of things to try. One specific thing you can do today — or this week — that moves something forward.</div></div>
+      <div class="wc fade-up"><div class="wc-icon">📖</div><div class="wc-t">Real honesty</div><div class="wc-b">No highlight reels. No manufactured vulnerability. Just what I'm actually seeing, thinking, and learning from inside the build — right now.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fw">
+    <div class="ft">
+      <div><div class="flo">WIN <span>THE</span> DAY</div><p class="ftag">Built from the middle of the fire.<br>North Vancouver, BC — Steve Enns</p></div>
+      <div><div class="fch">Navigate</div><div class="fcl"><a href="about.html">About Steve</a><a href="blog.html">The Dispatch</a><a href="newsletter.html">Subscribe</a><a href="start.html">Start Here</a></div></div>
+      <div><div class="fch">Work with me</div><div class="fcl"><a href="newsletter.html">Newsletter — $19/mo</a><a href="start.html">Starter Kit — $97</a><a href="newsletter.html">90-Day Accelerator</a><a href="newsletter.html">Already Done — 2026</a></div></div>
+    </div>
+    <div class="fb"><span>© 2026 Steve Enns — Win The Day · wintheday.me</span><div class="fbl"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+  </div>
+</footer>
+<script>
+document.documentElement.style.backgroundColor='#0D0B08';
+document.body.style.backgroundColor='#0D0B08';
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);obs.unobserve(e.target)}})},{threshold:0.08});
+document.querySelectorAll('.fade-up,.fade-in').forEach(el=>obs.observe(el));
+document.querySelectorAll('form').forEach(f=>{f.addEventListener('submit',e=>{e.preventDefault();const b=f.querySelector('button');const o=b.textContent;b.textContent="You're in ✓";b.style.background='#2d7a4a';b.style.color='#fff';b.disabled=true;setTimeout(()=>{b.textContent=o;b.style.background='';b.style.color='';b.disabled=false;f.reset()},3000)})});
+document.querySelectorAll('input').forEach(i=>{i.addEventListener('focus',()=>i.style.borderColor='var(--fire)');i.addEventListener('blur',()=>i.style.borderColor='')});
+</script>
+</body>
+</html>
