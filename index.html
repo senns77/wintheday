@@ -107,15 +107,8 @@ nav{
   pointer-events:none;z-index:1;
 }
 
-/* Big flame BG */
-.flame-bg{
-  position:absolute;
-  right:-40px;bottom:0;
-  width:420px;height:560px;
-  z-index:2;
-  opacity:0.55;
-  pointer-events:none;
-}
+/* Big flame BG - hidden, causes dead space */
+.flame-bg{display:none}
 
 .hero-inner{
   max-width:var(--max);margin:0 auto;
@@ -123,8 +116,8 @@ nav{
   position:relative;z-index:3;
   width:100%;
   display:grid;
-  grid-template-columns:1fr 300px;
-  gap:3rem;
+  grid-template-columns:1fr 380px;
+  gap:4rem;
   align-items:center;
 }
 
