@@ -179,7 +179,7 @@ Return ONLY a raw JSON object — no markdown, no code fences, nothing before or
 
   try {
     const response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-5",
       max_tokens: 1500,
       messages: [{ role: "user", content: prompt }],
     });
