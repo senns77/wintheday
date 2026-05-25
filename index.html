@@ -10,10 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;background:#171512}
+html{scroll-behavior:smooth;background:#000000}
 body{
   font-family:'DM Sans',sans-serif;
-  background-color:#171512 !important;
+  background-color:#000000 !important;
   color:#F0EBE0;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -28,7 +28,7 @@ a{text-decoration:none;color:inherit}
   --gold:#D4A843;
   --warm:#F0EBE0;
   --ash:#9A9080;
-  --coal:#1E1B14;
+  --coal:#0A0A0A;
   --max:1100px;
   --serif:'Libre Baskerville',Georgia,serif;
   --display:'Bebas Neue',sans-serif;
@@ -44,7 +44,7 @@ section, nav, footer, div {
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   padding:0 1.5rem;
-  background:#171512;
+  background:#000000;
   border-bottom:1px solid rgba(232,98,26,0.3);
 }
 .nw{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
@@ -65,7 +65,7 @@ nav{
 
 /* HERO */
 .hero{
-  background-color:#171512;
+  background-color:#000000;
   min-height:100vh;
   padding-top:58px;
   position:relative;
@@ -239,7 +239,7 @@ nav{
 
 /* THE LINE */
 .ls{
-  background:#171512;
+  background:#000000;
   padding:7rem 1.5rem;
   text-align:center;
   position:relative;overflow:hidden;
@@ -291,7 +291,7 @@ nav{
 .btn-out:hover{border-color:var(--fire);background:rgba(232,98,26,0.08);color:#fff}
 
 /* THREE TRUTHS */
-.ts-section{background:#1E1B14;padding:6rem 1.5rem;border-top:1px solid rgba(255,255,255,0.04)}
+.ts-section{background:#0A0A0A;padding:6rem 1.5rem;border-top:1px solid rgba(255,255,255,0.04)}
 .tg{
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:1px;
@@ -301,11 +301,11 @@ nav{
   margin-top:3rem;
 }
 .tc{
-  background:#1E1B14;
+  background:#0A0A0A;
   padding:2.5rem 2rem;
   position:relative;transition:background .3s;
 }
-.tc:hover{background:#1F1C15}
+.tc:hover{background:#0A0A0A}
 .tc::after{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,var(--fire),var(--ember));
@@ -320,7 +320,7 @@ nav{
 
 /* READING */
 .rs{
-  background:#171512;
+  background:#000000;
   padding:3rem 1.5rem;
   border-top:1px solid rgba(232,98,26,0.3);
   border-bottom:1px solid rgba(232,98,26,0.3);
@@ -335,7 +335,7 @@ nav{
 .rq cite{display:block;margin-top:.6rem;font-size:10px;color:rgba(240,235,224,0.88);font-style:normal;font-weight:600;letter-spacing:.08em}
 
 /* ABOUT */
-.as-section{background:#171512;padding:7rem 1.5rem;position:relative;overflow:hidden}
+.as-section{background:#000000;padding:7rem 1.5rem;position:relative;overflow:hidden}
 .as-glow{position:absolute;left:-15%;top:50%;transform:translateY(-50%);width:50vw;height:60vh;background:radial-gradient(ellipse,rgba(232,98,26,0.07) 0%,transparent 70%);pointer-events:none}
 .ag{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 
@@ -356,12 +356,12 @@ nav{
 }
 
 /* DISPATCH */
-.disp-section{background:#1E1B14;padding:7rem 1.5rem;border-top:1px solid rgba(255,255,255,0.04)}
+.disp-section{background:#0A0A0A;padding:7rem 1.5rem;border-top:1px solid rgba(255,255,255,0.04)}
 .dh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
 .da{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,235,224,0.88);border-bottom:1px solid rgba(240,235,224,0.1);padding-bottom:2px;transition:all .2s}
 .da:hover{color:#fff;border-color:rgba(255,255,255,0.4)}
 .pg{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:1px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.05);border-radius:4px;overflow:hidden}
-.pc{background:#1E1B14;padding:2.5rem 2rem;transition:background .2s}
+.pc{background:#0A0A0A;padding:2.5rem 2rem;transition:background .2s}
 .pc:hover{background:#171410}
 .pc.lead{background:#1A1712}
 .pcat{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);margin-bottom:.75rem;display:block}
@@ -375,7 +375,7 @@ nav{
 
 /* CTA */
 .cta-section{
-  background:#171512;
+  background:#000000;
   padding:5rem 1.5rem;
   position:relative;overflow:hidden;
   text-align:center;
@@ -406,7 +406,7 @@ nav{
 .cguar{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.06);font-family:var(--serif);font-size:.875rem;font-style:italic;color:rgba(240,235,224,0.88);line-height:1.7}
 
 /* FOOTER */
-footer{background:#0F0D0A;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(232,98,26,0.1)}
+footer{background:#050505;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(232,98,26,0.1)}
 .fw{max-width:var(--max);margin:0 auto}
 .ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.04)}
 .flo{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em;color:#fff;margin-bottom:.75rem}
@@ -584,7 +584,7 @@ footer{background:#0F0D0A;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(2
       <div class="aa fade-in">
         <div class="aa-border"></div>
         <svg class="aa-svg" viewBox="0 0 400 533" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="533" fill="#1E1B14"/>
+          <rect width="400" height="533" fill="#0A0A0A"/>
           <!-- Grid -->
           <line x1="0" y1="133" x2="400" y2="133" stroke="rgba(232,98,26,0.08)" stroke-width="1"/>
           <line x1="0" y1="266" x2="400" y2="266" stroke="rgba(232,98,26,0.08)" stroke-width="1"/>
@@ -729,8 +729,8 @@ footer{background:#0F0D0A;padding:4rem 1.5rem 2.5rem;border-top:1px solid rgba(2
 
 <script>
 // Force dark bg on iOS
-document.documentElement.style.backgroundColor = '#171512';
-document.body.style.backgroundColor = '#171512';
+document.documentElement.style.backgroundColor = '#000000';
+document.body.style.backgroundColor = '#000000';
 
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
