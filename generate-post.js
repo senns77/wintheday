@@ -147,7 +147,8 @@ const PILLARS = ["The Knowing", "The Fire", "The Build"];
 
 // ─── GENERATE POST ──────────────────────────────────────────────────────────
 async function generatePost() {
-  const today = new Date();
+  const dateArg = process.argv[2];
+  const today = dateArg ? new Date(`${dateArg}T12:00:00`) : new Date();
   const dateStr = today.toISOString().split("T")[0];
 
   // Rotate pillars by day of week
